@@ -614,22 +614,3 @@ function cardOur(products) {
 }
 
 cardOur(products);
-
-const searchInput = document.querySelector("form__options-input");
-const resultsList = document.getElementById("results");
-
-searchInput.addEventListener("input", (e) => {
-  const value = e.target.value.trim();
-  resultsList.innerHTML = ""; // Clear previous results
-
-  if (value.length > 0) {
-    // Perform your search logic here (e.g., filter data, fetch results)
-    // For demonstration purposes, let's add some dummy results:
-    const dummyResults = products;
-    dummyResults.forEach((item) => {
-      const crated = document.createElement("div");
-      div.textContent = item;
-      resultsList.appendChild(div);
-    });
-  }
-});
