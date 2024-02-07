@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="src/css/style.min.css" />
+    <title>Products / Pages</title>
+    <link rel="stylesheet" href="../css/style.min.css" />
   </head>
   <body>
     <header class="header">
@@ -14,7 +14,7 @@
             <div class="nav">
               <a href="" class="logo__link">
                 <img
-                  src="src/img/icons/logo-1.svg"
+                  src="../img/icons/logo-1.svg"
                   alt="logo"
                   class="logo__img"
                 />
@@ -22,7 +22,7 @@
               <div class="form">
                 <button class="bars">
                   <span
-                    ><img src="src/img/icons/bars.svg" alt="bars icons"
+                    ><img src="../img/icons/bars.svg" alt="bars icons"
                   /></span>
                   <span class="bars__text">Каталог</span>
                 </button>
@@ -35,7 +35,7 @@
                   <button class="form__options-btn">
                     <span
                       ><img
-                        src="src/img/icons/search-icons.svg"
+                        src="../img/icons/search-icons.svg"
                         alt="search icons"
                     /></span>
                   </button>
@@ -45,37 +45,36 @@
             <!-- center navbar -->
             <div class="menu">
               <button class="menu__btn">
-                <span><img src="src/img/icons/heart.svg" alt="heart" /></span>
+                <span><img src="../img/icons/heart.svg" alt="heart" /></span>
                 <span>Избранное</span>
               </button>
               <button class="menu__btn">
-                <span><img src="src/img/icons/boxs.svg" alt="carts" /></span>
+                <span><img src="../img/icons/boxs.svg" alt="carts" /></span>
                 <span>продукты</span>
               </button>
               <button class="menu__btn">
                 <span class="badge"
-                  ><img src="src/img/icons/carts.svg" alt="carts"
+                  ><img src="../img/icons/carts.svg" alt="carts"
                 /></span>
                 <span>Корзина</span>
               </button>
               <button class="dropdown">
                 <span class="dropdown__img">
                   <img
-                    src="src/img/home/avatar.png"
+                    src="../img/home/avatar.png"
                     class="dropdown__img__avatar"
                     alt="avatar-user"
                   />
                 </span>
                 <b class="dropdow__name">Алексей</b>
                 <span class="dropdown__icons">
-                  <img src="src/img/icons/arrow-down.svg" alt="arrow-drop" />
+                  <img src="../img/icons/arrow-down.svg" alt="arrow-drop" />
                 </span>
               </button>
             </div>
           </div>
         </div>
       </nav>
-
       <div class="catalogs">
         <div class="container">
           <div class="catalogs__menu">
@@ -146,107 +145,16 @@
           </div>
         </div>
       </div>
-      <div class="header__hero">
-        <div class="container">
-          <div class="hero__content">
-            <img src="src/img/home/hero-img.png" alt="hero images" />
-            <h1>Доставка бесплатно от 1000 ₽</h1>
-          </div>
-        </div>
-      </div>
     </header>
     <main class="main">
       <div class="container">
-        <div class="card__group">
-          <div class="card__content-name">
-            <h2 class="card__content-heading">Акции</h2>
-            <a href="src/pages/products.html" class="card__content-link">
-              <span class="text-link">Все продукты</span>
-
-              <img src="src/img/icons/right-arrow.svg" alt="right arrow" />
-            </a>
-          </div>
-          <div class="cards"></div>
+        <div class="card__our">
+          <h3 class="card__our-heading">Все продукты</h3>
+          <div class="card__products" id="card__products"></div>
         </div>
-        <div class="card__group">
-          <div class="card__content-name">
-            <h2 class="card__content-heading">Новинки</h2>
-            <a href="#" class="card__content-link">
-              <span class="text-link">Все продукты</span>
-
-              <img src="src/img/icons/right-arrow.svg" alt="right arrow" />
-            </a>
-          </div>
-          <div class="card__new"></div>
-        </div>
-        <div class="card__group">
-          <div class="card__content-name">
-            <h2 class="card__content-heading">Покупали раньше</h2>
-            <a href="#" class="card__content-link">
-              <span class="text-link">Все продукты</span>
-
-              <img src="src/img/icons/right-arrow.svg" alt="right arrow" />
-            </a>
-          </div>
-          <div class="card__opt"></div>
-        </div>
-        <!-- center -->
-        <div class="pred__group">
-          <h2 class="pred__group-name">Специальные предложения</h2>
-          <div class="pred__group-opt">
-            <div class="pred__card">
-              <div class="pred__card-left">
-                <h3>Оформите карту «Северяночка»</h3>
-                <p>И получайте бонусы при покупке в магазинах и на сайте</p>
-              </div>
-              <div class="pred__card-right">
-                <img src="src/img/home/pred-1.svg" alt="card images" />
-              </div>
-            </div>
-            <div class="pred__card secondary">
-              <div class="pred__card-left">
-                <h3>Покупайте акционные товары</h3>
-                <p>И получайте вдвое больше бонусов</p>
-              </div>
-              <div class="pred__card-right">
-                <img src="src/img/home/pred-2.svg" alt="card images" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- maps start -->
-        <div class="maps">
-          <h3 class="maps__heading">Наши магазины</h3>
-          <div class="maps__sections">
-            <div class="button__group">
-              <button class="btn__maps">п.Щельяюр</button>
-              <button class="btn__maps">д.Вертеп</button>
-              <button class="btn__maps">с.Краснобор</button>
-              <button class="btn__maps">д.Диюр</button>
-            </div>
-            <div class="iframe__maps">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.073069253117!2d69.20123767593262!3d41.28551417131292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1sen!2s!4v1707250739807!5m2!1sen!2s"
-                width="100%"
-                height="354px"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <!-- maps end -->
-        <!-- statiy -->
-        <div class="statiy">
-          <h3 class="statiy__heading">Статьи</h3>
-          <div class="statiy__news"></div>
-        </div>
-        <!-- statiy -->
       </div>
     </main>
-    <script src="src/js/app.js"></script>
-    <script src="src/js/card.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/products-data.js"></script>
   </body>
 </html>

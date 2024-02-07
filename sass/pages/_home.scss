@@ -1,0 +1,38 @@
+@use "../base/variable" as var;
+
+body {
+  background-color: var.$bgpage;
+}
+
+.header {
+  transition: all 2.9s;
+  &__hero {
+    width: 100%;
+    margin-top: 80px;
+    background-image: url("/src/img/home/hero.svg");
+    background-color: var.$white;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -12;
+    .hero__content {
+      height: 230px;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        z-index: 1;
+      }
+      h1 {
+        /* Desc/Header/L */
+        color: rgb(65, 65, 65);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+    }
+  }
+}

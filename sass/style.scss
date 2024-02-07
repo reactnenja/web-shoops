@@ -1,0 +1,30 @@
+//==================== base ============== //
+@use "base/resit";
+@use "base/typography";
+@use "base/variable";
+//==================== base ============== //
+
+// ================= components =================//
+@use "components/button";
+@use "components/card";
+@use "components/navbar";
+// ================= components =================//
+// ================= functions =================//
+@use "func/functions";
+@use "func/mixin";
+// ================= functions =================//
+// ===================== pages ============== //
+@use "pages/home";
+@use "pages/category";
+// ===================== pages ============== //
+// ================ themes ================ //
+@use "theme/mode";
+// ================ themes ================ //
+// ================ utils ================ //
+@use "./utils/container";
+// ================ utils ================ //
+
+body {
+  font-family: "Rubik";
+  font-weight: 400;
+}

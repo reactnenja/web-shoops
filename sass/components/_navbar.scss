@@ -1,0 +1,219 @@
+@use "../base/variable" as var;
+@use "../func/mixin" as mix;
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background-color: var.$white;
+  border-bottom: 0.5px solid black;
+  // border-bottom: 1px solid black;
+  z-index: 22;
+  .container {
+    .navigations {
+      height: 80px;
+      @include mix.flex(space-between, center, 40px);
+      .nav {
+        width: 718px;
+        padding: 8px;
+        @include mix.flex(flex-start, center, 40px);
+        // border: 1px solid;
+        .logo__link {
+          width: 152px;
+          .logo__img {
+            width: 100%;
+          }
+        }
+        .form {
+          @include mix.flex(space-between, center, 24px);
+          width: 360px;
+          .bars {
+            max-width: 140px;
+            display: inline-block;
+            @include mix.flex(space-between, center, 10px);
+            padding: 9.5px 20px;
+            background-color: var.$secondary;
+            border-radius: 4px;
+            border: 2px solid var.$secondary;
+            transition: all 0.9s;
+            .bars__text {
+              display: inline-block;
+              color: rgb(255, 255, 255);
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 150%;
+              letter-spacing: 0%;
+              text-align: center;
+            }
+            &:hover {
+              opacity: 0.8;
+              cursor: pointer;
+            }
+          }
+          &__options {
+            @include mix.flex(space-between, strech, 4px);
+            background-color: var.$white;
+            border-radius: 10px;
+            outline: 2px solid var.$secondary;
+            &-input {
+              padding: 10px 15px;
+              width: 280px;
+              border: none;
+              outline: none;
+              /* Desc/Text/S */
+              color: rgb(143, 143, 143);
+              font-family: "Rubik";
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 150%;
+              letter-spacing: 0%;
+              text-align: left;
+              &:focus {
+                color: var.$secondary;
+                &::placeholder {
+                  color: var.$secondary;
+                }
+              }
+            }
+            &-btn {
+              padding: 0px 3px 0px 0px;
+              background-color: transparent;
+              border: none;
+            }
+          }
+        }
+      }
+      .menu {
+        @include mix.flex(flex-start, center, 24px);
+        width: 503px;
+        height: auto;
+        &__btn {
+          display: block;
+          width: 80px;
+          height: 63px;
+          text-align: center;
+          border: 2px solid var.$white;
+          background-color: var.$white;
+          border-radius: 4px;
+          position: relative;
+          top: 0;
+          cursor: pointer;
+          span {
+            img {
+              width: 24px;
+            }
+            width: 100%;
+          }
+          .badge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .badge::after {
+            content: "2";
+            position: absolute;
+            top: 5px;
+            right: 13px;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border: 2px solid red;
+          }
+          &:focus {
+            box-shadow: 0px 2px 2px 0.2px var.$black-100;
+            &:hover {
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+    }
+    .dropdown {
+      @include mix.flex(flex-start, center, 20px);
+      padding: 12px 20px;
+      height: 100%;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid var.$secondary;
+      background-color: transparent;
+      transition: all 1s;
+      .dropdown__img {
+        .dropdown__img__avatar {
+          width: 40px;
+          height: 40px;
+        }
+        .dropdow__name {
+          /* Desc/Text/S */
+          color: rgb(35, 35, 35);
+          font-family: "Rubik";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+        .dropdown__icons {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      &:hover {
+        background-color: var.$secondary;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.catalogs {
+  width: 100%;
+  height: 300px;
+  position: fixed;
+  background-color: var.$white;
+  z-index: 10;
+
+  display: none;
+  .catalogs__menu {
+    height: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 0px;
+    .catalogs__list {
+      width: 272px;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 24px;
+      list-style: none;
+      &-item {
+        padding: 0px 7px;
+        &__link {
+          text-align: left;
+          text-decoration: none;
+          /* Desc/Text-Bold/S */
+          color: rgb(65, 65, 65);
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 150%;
+          letter-spacing: 0%;
+          transition: all 0.9s;
+          text-align: left;
+          &:hover {
+            color: var.$main-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.open {
+  display: block;
+  overflow: hidden;
+  transition: all 1.1s;
+}

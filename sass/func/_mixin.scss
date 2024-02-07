@@ -1,0 +1,23 @@
+@mixin container($max-w: 1536) {
+  max-width: calc($max-w - 116 * 2) + px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: auto;
+}
+
+@mixin flex($jc, $ai, $gp) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gp;
+}
+@mixin flex-card($jc, $ai, $gp, $fb) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gp;
+  flex-basis: $fb;
+}
